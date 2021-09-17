@@ -9,10 +9,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: version
+      - id: version
         uses: jaceenet/git-versioning@v1.3.0
+        env:
+          nextVersion: the
 
       - name: Conventional Changelog Action
+        id: nextversion
         uses: TriPSs/conventional-changelog-action@v3
         with:
           github-token: ${{ secrets.github_token }}
