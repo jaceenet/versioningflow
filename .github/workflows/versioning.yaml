@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: versioning
-        uses: jaceenet/git-versioning@v1.2
+        uses: jaceenet/git-versioning@v1.3.0
 
       - name: Conventional Changelog Action
         uses: TriPSs/conventional-changelog-action@v3
