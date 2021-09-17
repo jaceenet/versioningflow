@@ -1,0 +1,21 @@
+name: Git Version
+
+on:
+  workflow_dispatch:
+
+jobs:
+  branch_version:
+    runs-on: ubuntu-latest    
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Conventional Changelog Action
+        uses: TriPSs/conventional-changelog-action@v3
+        with:
+          github-token: ${{ secrets.github_token }}
+          tag-prefix: 'v'
+          skip-commit: 'true'
+          fallback-version: 1.0.0
+        
+      - name: see
+        run: echo "${{ steps.nextversion.outputs.nextVersion }}"
