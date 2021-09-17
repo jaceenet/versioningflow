@@ -24,4 +24,4 @@ jobs:
         run: echo "${{ steps.nextversion.outputs.nextVersion }}"
 
       - name: see2
-        run: echo "${{ steps.versioning.outputs.time }}"
+        run: echo "tag ${{ steps.versioning.outputs.tagVersion }} tag ${{ steps.versioning.outputs.nextVersion }}"
