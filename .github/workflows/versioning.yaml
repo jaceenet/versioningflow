@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: versioning
+      - name: version
         uses: jaceenet/git-versioning@v1.3.0
 
       - name: Conventional Changelog Action
@@ -24,4 +24,4 @@ jobs:
         run: echo "${{ steps.nextversion.outputs.nextVersion }}"
 
       - name: see2
-        run: echo "tag ${{ steps.versioning.outputs.tagVersion }} tag ${{ steps.versioning.outputs.nextVersion }}"
+        run: echo "tag ${{ steps.version.outputs.tagVersion }} tag ${{ steps.version.outputs.nextVersion }}"
