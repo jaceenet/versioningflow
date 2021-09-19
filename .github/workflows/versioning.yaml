@@ -12,7 +12,9 @@ jobs:
           fetch-depth: 0
 
       - id: version
-        uses: jaceenet/git-versioning@v1.3.0
+        uses: jaceenet/git-versioning@v1.4.0
+        with:
+          tag-commit: false          
         env:
           nextVersion: the
 
