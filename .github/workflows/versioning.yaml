@@ -13,8 +13,6 @@ jobs:
 
       - id: version
         uses: jaceenet/git-versioning@v1.4.0        
-        env:
-          nextVersion: the
 
       - name: Conventional Changelog Action
         id: nextversion
